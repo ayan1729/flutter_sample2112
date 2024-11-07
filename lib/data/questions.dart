@@ -4,7 +4,7 @@ const questions = [
   QuizQuestions("1. Which Country Launched World's First Wooden Satellite?",
       ['Japan', 'Sierre Leone', 'The USA', 'China'], 'Japan'),
   QuizQuestions(
-      "2. Which tech company plans to release the world's most powerful quantum computer by 2025?",
+      "2. Which tech giant aims to launch a 4000-qubit quantum computer by 2025?",
       ["IBM", "Google", "Microsoft", "Apple"],
       "IBM"),
   QuizQuestions(
@@ -22,19 +22,12 @@ const questions = [
       ["Telangana", "Maharashtra", "Tamil Nadu", "Andhra Pradesh"],
       'Telangana'),
   QuizQuestions(
-      "7. What was world's first jet-powered aircraft in combat during WWII by Germany?",
-      [
-        "Messerschmitt Me 262",
-        "Gloster Meteor",
-        "Lockheed P-80 Shooting Star",
-        "Mitsubishi J8M"
-      ],
-      'Messerschmitt Me 262'),
+      "7. What was world's first jet-powered aircraft in combat during WWII?",
+      ["Me 262", "Gloster Meteor", "Lockheed P-80", "Mitsubishi J8M"],
+      'Me 262'),
 
-  QuizQuestions(
-      "8. Which 1970s computer first featured a GUI?",
-      ["Xerox Alto", "Apple Lisa", "IBM Personal Computer", "Commodore 64"],
-      'Xerox Alto'),
+  QuizQuestions("8. Which 1970s computer first featured a GUI?",
+      ["Xerox Alto", "Apple Lisa", "IBM PC", "Commodore 64"], 'Xerox Alto'),
 
   QuizQuestions(
       "9. When was the first color television program broadcast in India?",

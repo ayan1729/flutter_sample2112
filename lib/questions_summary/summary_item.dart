@@ -33,12 +33,12 @@ class SummaryItem extends StatelessWidget {
                 itemData['question'] as String,
                 style: GoogleFonts.lato(
                   color: Colors.white,
-                  fontSize: 17,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(
-                height: 5,
+                height: 0,
               ),
               Text(
                 "Your answer: ${itemData['user_answer'] as String}",

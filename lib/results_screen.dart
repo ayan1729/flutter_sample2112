@@ -395,8 +395,8 @@ class ResultsScreen extends StatelessWidget {
             // Updated message for time-up
             Text(
               isTimeUp
-                  ? 'Oops!! Times Up\nYou answered $numCorrectQuestions out of $numTotalQuestions questions correctly!'
-                  : 'Hurray!! You Completed Within Time\nYou answered $numCorrectQuestions out of $numTotalQuestions questions correctly!',
+                  ? 'Oops!! Times up!\nYour score: $numCorrectQuestions/$numTotalQuestions'
+                  : 'Hurray!! You finished on time!\nYour score: $numCorrectQuestions/$numTotalQuestions',
               style: GoogleFonts.lato(
                 color: Colors.black,
                 fontSize: 27,
