@@ -67,3 +67,92 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
+// import 'package:adv_basics/data/questions.dart';
+
+// class QuestionsScreen extends StatefulWidget {
+//   final void Function(String) onSelectAnswer;
+
+//   const QuestionsScreen({super.key, required this.onSelectAnswer});
+
+//   @override
+//   _QuestionsScreenState createState() => _QuestionsScreenState();
+// }
+
+// class _QuestionsScreenState extends State<QuestionsScreen> {
+//   int currentQuestionIndex = 0;
+
+//   void answerQuestion(String selectedAnswer) {
+//     widget.onSelectAnswer(selectedAnswer);
+//     setState(() {
+//       currentQuestionIndex++;
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     final currentQuestion = questions[currentQuestionIndex];
+
+//     return SizedBox(
+//       width: double.infinity,
+//       child: Container(
+//         margin: const EdgeInsets.all(50),
+//         child: Column(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           crossAxisAlignment: CrossAxisAlignment.stretch,
+//           children: [
+//             // AnimatedSwitcher for the Question Text
+//             AnimatedSwitcher(
+//               duration: const Duration(seconds: 1),
+//               transitionBuilder: (child, animation) {
+//                 // Here, we're using a fade transition by default
+//                 return FadeTransition(opacity: animation, child: child);
+//               },
+//               child: Text(
+//                 currentQuestion.text,
+//                 key: ValueKey<int>(
+//                     currentQuestionIndex), // Unique key for each question
+//                 style: GoogleFonts.playfairDisplay(
+//                     color: Colors.white,
+//                     fontSize: 24,
+//                     fontWeight: FontWeight.bold),
+//                 textAlign: TextAlign.center,
+//               ),
+//             ),
+//             const SizedBox(height: 30),
+//             // Render answer buttons
+//             ...currentQuestion.getShuffledAnswers().map((answer) {
+//               return ElevatedButton(
+//                 onPressed: () {
+//                   answerQuestion(answer);
+//                 },
+//                 style: ElevatedButton.styleFrom(
+//                   padding:
+//                       const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+//                   backgroundColor: Colors.pink,
+//                   foregroundColor: Colors.white,
+//                   shape: RoundedRectangleBorder(
+//                     borderRadius: BorderRadius.circular(40),
+//                   ),
+//                 ),
+//                 child: Text(answer),
+//               );
+//             })
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
+

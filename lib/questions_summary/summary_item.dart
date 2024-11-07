@@ -18,32 +18,38 @@ class SummaryItem extends StatelessWidget {
           isCorrectAnswer: isCorrectAnswer,
           questionIndex: itemData['question_index'] as int,
         ),
-        const SizedBox(width: 20),
+        const SizedBox(
+          width: 20,
+          height: 120,
+        ),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // const SizedBox(
+              //   height: 2,
+              // ),
               Text(
                 itemData['question'] as String,
                 style: GoogleFonts.lato(
                   color: Colors.white,
-                  fontSize: 16,
+                  fontSize: 17,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               const SizedBox(
-                height: 4,
+                height: 5,
               ),
               Text(
-                itemData['user_answer'] as String,
+                "Your answer: ${itemData['user_answer'] as String}",
                 style: const TextStyle(
-                  color: Colors.black,
+                  color: Color.fromARGB(255, 245, 229, 1),
                 ),
               ),
               Text(
-                itemData['correct_answer'] as String,
+                "Correct answer: ${itemData['correct_answer'] as String}",
                 style: const TextStyle(
-                  color: Colors.green,
+                  color: Color.fromRGBO(2, 246, 11, 1),
                 ),
               ),
             ],
