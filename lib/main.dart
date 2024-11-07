@@ -6,6 +6,9 @@ void main() {
     const Quiz(),
   );
 }
+
+//IMPORTANT ABOVE
+
 // void main() {
 //   runApp(
 //     MaterialApp(
@@ -34,3 +37,4 @@ void main() {
 //     ),
 //   );
 // }
+

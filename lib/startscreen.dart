@@ -54,6 +54,8 @@ class StartScreen extends StatelessWidget {
   }
 }
 
+//IMPORTANT ABOVE
+
 // import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 // import 'package:adv_basics/questionsscreen.dart'; // Import QuestionsScreen
@@ -77,7 +79,7 @@ class StartScreen extends StatelessWidget {
 //           ),
 //           const SizedBox(height: 60),
 //           Text(
-//             '''Take a Quiz  &  
+//             '''Take a Quiz  &
 //             Test Your Knowledge :)''',
 //             style: GoogleFonts.playfairDisplay(
 //               textStyle: const TextStyle(
@@ -131,6 +133,61 @@ class StartScreen extends StatelessWidget {
 //               style: TextStyle(fontSize: 21),
 //             ),
 //           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+// import 'package:flutter/material.dart';
+// import 'package:google_fonts/google_fonts.dart';
+
+// class StartScreen extends StatelessWidget {
+//   // Accept the function that starts the quiz
+//   final void Function() startQuiz;
+
+//   // Constructor expects this function
+//   const StartScreen({Key? key, required this.startQuiz}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Center(
+//       child: Column(
+//         mainAxisSize: MainAxisSize.min,
+//         children: [
+//           // Image at the top of the screen
+//           Image.asset(
+//             "assets/images/quiz-logo2.png",
+//             width: 400,
+//             height: 425,
+//             color: Colors.orange,
+//           ),
+//           const SizedBox(height: 60),
+//           // Title text
+//           Text(
+//             '''Take a Quiz  &
+//             Test Your Knowledge :)''',
+//             style: GoogleFonts.playfairDisplay(
+//               textStyle: const TextStyle(
+//                   fontSize: 23,
+//                   fontWeight: FontWeight.bold,
+//                   color: Colors.black),
+//             ),
+//           ),
+//           const SizedBox(height: 40),
+//           // Button to start the quiz
+//           ElevatedButton.icon(
+//             onPressed: startQuiz, // Call the function passed from main.dart
+//             icon: const Icon(Icons.arrow_right_alt,
+//                 color: Color.fromARGB(255, 5, 5, 5)),
+//             style: ElevatedButton.styleFrom(
+//                 foregroundColor: const Color.fromARGB(255, 12, 12, 12),
+//                 backgroundColor: const Color.fromARGB(255, 255, 255, 255)),
+//             label: const Text(
+//               "Start Quiz",
+//               style: TextStyle(fontSize: 21),
+//             ),
+//           )
 //         ],
 //       ),
 //     );
