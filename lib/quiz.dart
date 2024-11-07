@@ -252,7 +252,7 @@ class _QuizState extends State<Quiz> {
   List<String> selectedAnswers = [];
   var activeScreen = 'start-screen';
   bool isTimeUp = false;
-  int remainingTime = 30; // Set timer for 30 seconds (for testing)
+  int remainingTime = 150; // Set timer for 30 seconds (for testing)
   Timer? _timer;
 
   void startTimer() {
@@ -290,7 +290,7 @@ class _QuizState extends State<Quiz> {
       selectedAnswers = [];
       activeScreen = 'questions-screen';
       isTimeUp = false;
-      remainingTime = 30; // Reset the timer to 30 seconds (for testing)
+      remainingTime = 150; // Reset the timer to 30 seconds (for testing)
       startTimer(); // Restart the timer
     });
   }

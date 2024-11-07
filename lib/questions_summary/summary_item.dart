@@ -33,7 +33,7 @@ class SummaryItem extends StatelessWidget {
                 itemData['question'] as String,
                 style: GoogleFonts.lato(
                   color: Colors.white,
-                  fontSize: 15,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -43,13 +43,15 @@ class SummaryItem extends StatelessWidget {
               Text(
                 "Your answer: ${itemData['user_answer'] as String}",
                 style: const TextStyle(
-                  color: Color.fromARGB(255, 245, 229, 1),
+                  color: Color.fromARGB(255, 255, 238, 0),
+                  fontSize: 14,
                 ),
               ),
               Text(
                 "Correct answer: ${itemData['correct_answer'] as String}",
                 style: const TextStyle(
-                  color: Color.fromRGBO(2, 246, 11, 1),
+                  color: Color.fromARGB(255, 0, 255, 13),
+                  fontSize: 14,
                 ),
               ),
             ],

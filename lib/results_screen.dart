@@ -393,14 +393,54 @@ class ResultsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Updated message for time-up
-            Text(
-              isTimeUp
-                  ? 'Oops!! Times up!\nYour score: $numCorrectQuestions/$numTotalQuestions'
-                  : 'Hurray!! You finished on time!\nYour score: $numCorrectQuestions/$numTotalQuestions',
-              style: GoogleFonts.lato(
-                color: Colors.black,
-                fontSize: 27,
-                fontWeight: FontWeight.bold,
+            // Text(
+            //   isTimeUp
+            //       ? 'Oops!! Times up\nYour score: $numCorrectQuestions/$numTotalQuestions'
+            //       : 'Yay!! You finished on time\nYour score: $numCorrectQuestions/$numTotalQuestions',
+            //   style: GoogleFonts.playfairDisplay(
+            //     color: const Color.fromARGB(255, 255, 255, 255),
+            //     fontSize: 24,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            //   textAlign: TextAlign.center,
+            // ),
+            Text.rich(
+              TextSpan(
+                children: [
+                  TextSpan(
+                    text: isTimeUp
+                        ? 'Oops!! Times up\n'
+                        : 'Yay!! You finished on time\n',
+                    style: GoogleFonts.playfairDisplay(
+                      color: isTimeUp
+                          ? const Color.fromARGB(255, 255, 255, 255)
+                          : const Color.fromARGB(255, 255, 255,
+                              255), // Different colors for different messages
+                      fontSize:
+                          24, // Larger size for the first part of the message
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: 'Your score: ',
+                    style: GoogleFonts.lato(
+                      color: const Color.fromARGB(
+                          255, 255, 5, 5), // Default color for the score text
+                      fontSize:
+                          22, // Smaller size for the text before the score
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  TextSpan(
+                    text: '$numCorrectQuestions/$numTotalQuestions',
+                    style: GoogleFonts.lato(
+                      color: const Color.fromARGB(
+                          255, 0, 0, 0), // Highlighted color for the score
+                      fontSize: 24, // Larger size for the score itself
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
               textAlign: TextAlign.center,
             ),
@@ -410,8 +450,8 @@ class ResultsScreen extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: onRestart,
               style: ElevatedButton.styleFrom(
-                foregroundColor: const Color.fromARGB(255, 5, 5, 5),
-              ),
+                  foregroundColor: const Color.fromARGB(255, 5, 5, 5),
+                  backgroundColor: const Color(0xFFE0E0E0)),
               icon: const Icon(Icons.refresh),
               label: const Text(
                 'Restart Quiz',

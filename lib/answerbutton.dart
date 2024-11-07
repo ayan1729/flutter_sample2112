@@ -64,7 +64,8 @@ class _AnswerButtonState extends State<AnswerButton> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
                 backgroundColor: Colors.pink,
-                foregroundColor: Colors.white,
+                foregroundColor: const Color.fromARGB(255, 255, 255, 255),
+                textStyle: const TextStyle(fontSize: 18),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(40))),
             child: Text(

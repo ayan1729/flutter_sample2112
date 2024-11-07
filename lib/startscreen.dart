@@ -14,18 +14,18 @@ class StartScreen extends StatelessWidget {
           Image.asset(
             "assets/images/quiz-logo2.png",
             width: 400,
-            height: 425,
-            color: Colors.orange,
+            height: 430,
+            color: const Color.fromARGB(255, 255, 255, 255),
             // color: const Color.fromARGB(245, 15, 53, 206),
           ),
-          const SizedBox(height: 60),
-          Text('''Take a Quiz  &
-            Test Your Knowledge :)''',
+          const SizedBox(height: 0),
+          Text('''        Take a Quiz  &
+Test Your Knowledge :)''',
               style: GoogleFonts.playfairDisplay(
                 textStyle: const TextStyle(
-                    fontSize: 23,
+                    fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                    color: Color.fromARGB(255, 213, 228, 236)),
               )),
           // Text(
           //           '''          Take a Quiz
@@ -41,8 +41,8 @@ class StartScreen extends StatelessWidget {
                 color: Color.fromARGB(255, 5, 5,
                     5)), //if we define icon inside button it makes it clickable
             style: ElevatedButton.styleFrom(
-                foregroundColor: const Color.fromARGB(255, 12, 12, 12),
-                backgroundColor: const Color.fromARGB(255, 255, 255, 255)),
+                foregroundColor: const Color.fromARGB(255, 0, 0, 0),
+                backgroundColor: const Color(0xFFA5D6A7)),
             label: const Text(
               "Start Quiz",
               style: TextStyle(fontSize: 21),

@@ -308,21 +308,30 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Container(
+              padding: const EdgeInsets.all(8.0),
+              decoration: BoxDecoration(
+                // color: const Color.fromARGB(
+                //     255, 11, 210, 210), // Background color for highlighting
+                color: const Color(0xFF66BB6A),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Text(
+                'Timer- ${widget.remainingTime ~/ 60}:${(widget.remainingTime % 60).toString().padLeft(2, '0')}',
+                style: GoogleFonts.lato(
+                  color: Colors.black,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            const SizedBox(height: 60),
             Text(
               currentQuestion.text,
               style: GoogleFonts.playfairDisplay(
                 color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 30),
-            Text(
-              'Time Remaining: ${widget.remainingTime ~/ 60}:${(widget.remainingTime % 60).toString().padLeft(2, '0')}',
-              style: GoogleFonts.lato(
-                color: Colors.white,
-                fontSize: 20,
+                fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
               textAlign: TextAlign.center,
